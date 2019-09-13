@@ -26,13 +26,23 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+    React JS tries to solve the problem of static web pages. React allows you to create elements dynamically, that automatically update with "effect" hooks when we edit their "state". When we're able to create elements dynamically, we can do extra cool things like get a list from some API, and dynamically create an element for each item in the array.
+
 - [ ] What does it mean to _think_ in react?
+
+    I'm not completely sure what this is asking. If it's just asking about how you think while making a react app, I think it's all about taking a second to plan out how you're app is going to be strutured. For example, we want to make a page with a feed of posts. Each post has a profile on it of the user who posted it. We could make a Post component and a child Profile component, etc.
 
 - [ ] Describe state.
 
+    State is the data that an instance of a component has. 
+
 - [ ] Describe props.
 
+    Props are just the arguments that we pass in when we make a new component (<NewComponent exampleProp="example">), that we can use in the component later (console.log(props.exampleProp)). You can even set up effects for when these props change.
+
 - [ ] What are side effects, and how do you sync effects in a React component to state or prop changes?
+
+    Side effects are callbacks that we set up that react calls when the state or prop (that you specify, you can also specify none and it will just run once at the start) is changed. This is super useful (for example, keeping your components displaying up-to-date state on the page like if we changed the component's 'name' state, and then the component on the page updated to show the new name). To sync effects to fire when a specific state or prop changes, you specify the state or prop at the end of the function call arguments (ex. useEffect(callback, stateOrProp))
 
 ## Project Set Up
 
